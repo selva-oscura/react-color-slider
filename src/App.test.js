@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import ReactDOM from 'react-dom';
 import App from './App';
-
+import Header from './Header';
 
 
 it('renders App without crashing (deep)', () => {
@@ -15,3 +15,7 @@ it('renders App without crashing (shallow)', () => {
 });
 
 
+it('renders Header without crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(<Header />, div);
+});
