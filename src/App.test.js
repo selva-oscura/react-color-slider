@@ -15,7 +15,12 @@ it('renders App without crashing (shallow)', () => {
 });
 
 
-it('renders Header without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Header />, div);
+it('renders Header without crashing (shallow)', () => {
+	shallow(<Header />)
+})
+
+it('renders Header text', () => {
+	const wrapper = shallow(<Header />);
+	const headerText = "Color Slider";
+	expect(wrapper.contains(headerText)).toEqual(true);
 });
