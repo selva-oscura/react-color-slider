@@ -11,9 +11,6 @@ const App = React.createClass({
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <h2>Color Slider</h2>
-        </div>
         <p>{this.state.defaultHue}</p>
       </div>
     );
