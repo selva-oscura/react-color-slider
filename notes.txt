@@ -1,0 +1,7 @@
+created project
+	create-react-app color-slider
+
+removed unneeded cruft
+
+added enzyme for testing
+	npm install --save-dev enzyme react-addons-test-utils
