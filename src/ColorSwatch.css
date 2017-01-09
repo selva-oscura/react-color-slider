@@ -1,0 +1,7 @@
+.ColorSwatch{
+	display: inline-block;
+	height: 200px;
+	width: 200px;
+	margin: 25px;
+	border: 1px solid black;
+}
