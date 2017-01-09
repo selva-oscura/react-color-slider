@@ -6,15 +6,21 @@ import ColorRange from './ColorRange';
 const App = React.createClass({
   getInitialState(){
     return{
-      defaultHue: 90,
+      hue: 90,
     }
+  },
+  updateHue(e){
+    this.setState({hue:e.target.value});
   },
   render() {
     return (
       <div className="App">
         <Header />
-        <p>{this.state.defaultHue}</p>
-        <ColorRange />
+        <p id='hueDisplay'>{this.state.hue}</p>
+        <ColorRange
+          hue={this.state.hue}
+          updateHue={this.updateHue}
+        />
       </div>
     );
   }
