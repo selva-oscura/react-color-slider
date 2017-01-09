@@ -15,12 +15,20 @@ it('renders App without crashing (shallow)', () => {
 });
 
 
-it('renders Header without crashing (shallow)', () => {
-	shallow(<Header />)
-})
+describe('tests for Header', () => {
+	var wrapper;
+	beforeEach(() => {
+		// prevent duplication
+		wrapper = shallow(<Header />);
+	});
+	it('renders Header without crashing (shallow)', () => {
+		expect(wrapper).toExist;
+	});
 
-it('renders Header text', () => {
-	const wrapper = shallow(<Header />);
-	const headerText = "Color Slider";
-	expect(wrapper.contains(headerText)).toEqual(true);
+	it('renders Header text', () => {
+		const headerText = "Color Slider";
+		expect(wrapper.contains(headerText)).toEqual(true);
+	});
+	
 });
+
