@@ -1,4 +1,5 @@
 import React from 'react';
+import './ColorRange.css';
 
 const ColorRange = ({colourParameter, colourValue,  updateColour, step, min, max}) => {
 	return(
