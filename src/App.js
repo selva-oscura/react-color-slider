@@ -7,23 +7,26 @@ import ColorSwatches from './ColorSwatches';
 const App = React.createClass({
   getInitialState(){
     return{
-      hue: 90,
+      hue: 0,
+      saturation: 50,
+      lightness: 50,
+      alpha: .5,
     }
   },
-  updateHue(e){
-    this.setState({hue:e.target.value});
+  updateColour(e){
+    let state = this.state;
+    state[e.target.id] = e.target.value;
+    this.setState(state);
   },
   render() {
     return (
       <div className="App">
         <Header />
-        <p id='hueDisplay'>{this.state.hue}</p>
         <ColorSwatches 
           hue={this.state.hue}
-        />
-        <ColorRange
-          hue={this.state.hue}
-          updateHue={this.updateHue}
+          saturation={this.state.saturation}
+          lightness={this.state.lightness}
+          alpha={this.state.alpha}
         />
       </div>
     );
