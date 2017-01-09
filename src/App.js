@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './Header';
 import ColorRange from './ColorRange';
+import ColorSwatches from './ColorSwatches';
 
 const App = React.createClass({
   getInitialState(){
@@ -17,6 +18,9 @@ const App = React.createClass({
       <div className="App">
         <Header />
         <p id='hueDisplay'>{this.state.hue}</p>
+        <ColorSwatches 
+          hue={this.state.hue}
+        />
         <ColorRange
           hue={this.state.hue}
           updateHue={this.updateHue}
