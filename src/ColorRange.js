@@ -1,17 +1,17 @@
 import React from 'react';
 
-const ColorRange = ({hue, updateHue}) => {
-	// console.log('hueValue', hue);
+const ColorRange = ({colourParameter, colourValue,  updateColour, step, min, max}) => {
 	return(
 		<div className="ColorRange">
+			<p id='parameterDisplay'>{colourParameter.toUpperCase()}: {colourValue}</p>
 			<input 
-				id="color" 
+				id={colourParameter} 
 				type="range" 
-				step="1" 
-				min="0" 
-				max="360" 
-				value={hue}
-				onChange={updateHue}
+				step={step}
+				min={min}
+				max={max}
+				value={colourValue}
+				onChange={updateColour}
 			/>
 		</div>
 	)
