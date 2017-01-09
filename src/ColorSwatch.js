@@ -1,16 +1,12 @@
 import React from 'react';
 import './ColorSwatch.css';
 
-const ColorSwatch = ({hue}) => {
-	console.log('hue?', hue)
+const ColorSwatch = ({hue, saturation, lightness, alpha}) => {
 	let background = {
-		backgroundColor: "hsla("+hue+", 80%, 80%, 1)"
+		backgroundColor: "hsla("+hue+", " + saturation + "%, " + lightness + "%, " + alpha + ")",
 	};
-	console.log('colour?', background);
 	return(
-		<div className="ColorSwatch" style={background}>
-
-		</div>
+		<div className="ColorSwatch" style={background}></div>
 	)
 };
 
