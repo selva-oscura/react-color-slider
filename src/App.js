@@ -28,6 +28,38 @@ const App = React.createClass({
           lightness={this.state.lightness}
           alpha={this.state.alpha}
         />
+        <ColorRange
+          colourParameter="hue"
+          colourValue={this.state.hue}
+          updateColour={this.updateColour}
+          step="1"
+          min="0"
+          max="360"
+        />
+        <ColorRange
+          colourParameter="saturation"
+          colourValue={this.state.saturation}
+          updateColour={this.updateColour}
+          step="1"
+          min="0"
+          max="100"
+        />
+        <ColorRange
+          colourParameter="lightness"
+          colourValue={this.state.lightness}
+          updateColour={this.updateColour}
+          step="1"
+          min="0"
+          max="100"
+        />
+        <ColorRange
+          colourParameter="alpha"
+          colourValue={this.state.alpha}
+          updateColour={this.updateColour}
+          step=".01"
+          min="0"
+          max="1"
+        />
       </div>
     );
   }
