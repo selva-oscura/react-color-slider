@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import ReactDOM from 'react-dom';
 import App from '../App';
 import Header from '../Header';
+import ColorRange from '../ColorRange';
 
 
 it('renders App without crashing (deep)', () => {
@@ -28,7 +29,15 @@ describe('tests for Header', () => {
 	it('renders Header text', () => {
 		const headerText = "Color Slider";
 		expect(wrapper.contains(headerText)).toEqual(true);
-	});
-	
+	});	
 });
 
+describe('tests for Color Range', () => {
+	var wrapper;
+	beforeEach(() => {
+		wrapper = shallow(<ColorRange />);
+	});
+	it('renders ColorRange without crashing (shallow)', () => {
+		expect(wrapper).toExist;
+	});
+});
