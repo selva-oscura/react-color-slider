@@ -6,13 +6,20 @@ import Header from '../Header';
 import ColorRange from '../ColorRange';
 
 
-it('renders App without crashing (deep)', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-});
+describe('tests for App', () => {
+	it('renders App without crashing (deep)', () => {
+	  const div = document.createElement('div');
+	  ReactDOM.render(<App />, div);
+	});
 
-it('renders App without crashing (shallow)', () => {
-  shallow(<App />);
+	it('renders App without crashing (shallow)', () => {
+	  shallow(<App />);
+	});
+
+	it('renders initial State hue', () => {
+		var wrapper = shallow(<App />).find('#hueDisplay');
+		expect(wrapper.contains(90)).toEqual(true);
+	});
 });
 
 
@@ -32,7 +39,7 @@ describe('tests for Header', () => {
 	});	
 });
 
-describe('tests for Color Range', () => {
+describe('tests for ColorRange', () => {
 	var wrapper;
 	beforeEach(() => {
 		wrapper = shallow(<ColorRange />);
@@ -41,3 +48,5 @@ describe('tests for Color Range', () => {
 		expect(wrapper).toExist;
 	});
 });
+
+
