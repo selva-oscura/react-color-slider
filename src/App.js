@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './Header';
-import ColorRange from './ColorRange';
+import ColorRanges from './ColorRanges';
 import ColorSwatches from './ColorSwatches';
 
 const App = React.createClass({
@@ -28,37 +28,12 @@ const App = React.createClass({
           lightness={this.state.lightness}
           alpha={this.state.alpha}
         />
-        <ColorRange
-          colourParameter="hue"
-          colourValue={this.state.hue}
+        <ColorRanges 
+          hue={this.state.hue}
+          saturation={this.state.saturation}
+          lightness={this.state.lightness}
+          alpha={this.state.alpha}
           updateColour={this.updateColour}
-          step="1"
-          min="0"
-          max="360"
-        />
-        <ColorRange
-          colourParameter="saturation"
-          colourValue={this.state.saturation}
-          updateColour={this.updateColour}
-          step="1"
-          min="0"
-          max="100"
-        />
-        <ColorRange
-          colourParameter="lightness"
-          colourValue={this.state.lightness}
-          updateColour={this.updateColour}
-          step="1"
-          min="0"
-          max="100"
-        />
-        <ColorRange
-          colourParameter="alpha"
-          colourValue={this.state.alpha}
-          updateColour={this.updateColour}
-          step=".01"
-          min="0"
-          max="1"
         />
       </div>
     );
