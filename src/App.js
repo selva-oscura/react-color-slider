@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './Header';
+import ColorRange from './ColorRange';
 
 const App = React.createClass({
   getInitialState(){
@@ -13,6 +14,7 @@ const App = React.createClass({
       <div className="App">
         <Header />
         <p>{this.state.defaultHue}</p>
+        <ColorRange />
       </div>
     );
   }
