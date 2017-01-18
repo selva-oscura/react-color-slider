@@ -5,8 +5,8 @@ const ColorSwatches = ({hue, saturation, lightness, alpha}) => (
 	<div className="ColorSwatches">
 		<ColorSwatch
 			hue={hue}
-			saturation="50"
-			lightness="50"
+			saturation="100"
+			lightness="80"
 			alpha="1"
 			key="1"
 		/>
