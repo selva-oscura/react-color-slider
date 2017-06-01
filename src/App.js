@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './Header';
 import ColorRanges from './ColorRanges';
-import ColorSwatches from './ColorSwatches';
+import ColorSwatchAreas from './ColorSwatchAreas';
 
 const App = React.createClass({
   getInitialState(){
@@ -24,7 +24,7 @@ const App = React.createClass({
     return (
       <div className="App">
         <Header />
-        <ColorSwatches 
+        <ColorSwatchAreas 
           hue={this.state.color.hue}
           saturation={this.state.color.saturation}
           lightness={this.state.color.lightness}
