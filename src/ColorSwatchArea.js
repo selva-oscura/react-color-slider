@@ -4,9 +4,6 @@ import ColorSwatchText from './ColorSwatchText';
 import './ColorSwatchArea.css';
 
 const ColorSwatchArea = ({hue, saturation, lightness, alpha, text}) => {
-	let background = {
-		backgroundColor: "hsla("+hue+", " + saturation + "%, " + lightness + "%, " + alpha + ")",
-	};
 	return(
 		<div className="ColorSwatchArea">
 			<ColorSwatch
