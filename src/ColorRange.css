@@ -1,7 +1,15 @@
 .ColorRange{
 	display: inline-block;
-	width: 200px;
-	margin: 25px;
+	width: 20vw;
+	margin: 2.5vw 2.5vw;
+}
+
+@media screen and (max-width: 600px) {
+  .ColorRange{
+    display: inline-block;
+    width: 40vw;
+    margin: 2.5vw 4vw;
+  }
 }
 
 

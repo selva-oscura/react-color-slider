@@ -4,3 +4,12 @@
 	width: 250px;
 	padding: 50px 25px 25px;
 }
+
+@media screen and (max-width: 600px) {
+  .ColorSwatchArea{
+    display: inline-block;
+    width: 40vw;
+    height: 40vw;
+    padding: 5vw 4vw 2.5vw;
+  }
+}
